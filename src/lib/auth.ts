@@ -15,5 +15,5 @@ export function signToken(user: { id: number; role: string }): string {
 }
 
 export function verifyToken(token: string): TokenPayload {
-  return jwt.verify(token, JWT_SECRET) as TokenPayload;
+  return jwt.verify(token, JWT_SECRET) as any;
 }
